@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "469b3572-92cb-4648-bc05-7bcd957dde6a",
+		"name": "HRMS Go-Fiber-MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43236001"
+	},
+	"item": [
+		{
+			"name": "Get all Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getEmployees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getEmployees"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all Employees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/getEmployees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getEmployees"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 16:42:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "316"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"6814f5c6b1adcafd339c1b3e\",\n        \"name\": \"John Doe\",\n        \"email\": \"john.doe@example.com\",\n        \"age\": 30,\n        \"salary\": 60000\n    },\n    {\n        \"id\": \"6814f5dab1adcafd339c1b3f\",\n        \"name\": \"Jane Doe\",\n        \"email\": \"jane.doe@example.com\",\n        \"age\": 25,\n        \"salary\": 50000\n    },\n    {\n        \"id\": \"6814f5f4b1adcafd339c1b40\",\n        \"name\": \"Rohit\",\n        \"email\": \"rohit@example.com\",\n        \"age\": 32,\n        \"salary\": 80000\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create an Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Rohit\",\r\n  \"email\": \"rohit@example.com\",\r\n  \"age\": 32,\r\n  \"salary\": 80000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/createEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createEmployee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create an Employee",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Rohit\",\r\n  \"email\": \"rohit@example.com\",\r\n  \"age\": 32,\r\n  \"salary\": 80000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/createEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"createEmployee"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 16:42:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "100"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6814f5f4b1adcafd339c1b40\",\n    \"name\": \"Rohit\",\n    \"email\": \"rohit@example.com\",\n    \"age\": 32,\n    \"salary\": 80000\n}"
+				}
+			]
+		},
+		{
+			"name": "Update an Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rohit 123\",\r\n    \"email\": \"rohit123@example.com\",\r\n    \"age\": 321,\r\n    \"salary\": 90000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/updateEmployee/6814f5f4b1adcafd339c1b40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateEmployee",
+						"6814f5f4b1adcafd339c1b40"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update an Employee",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rohit 123\",\r\n    \"email\": \"rohit123@example.com\",\r\n    \"age\": 321,\r\n    \"salary\": 90000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/updateEmployee/6814f5f4b1adcafd339c1b40",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"updateEmployee",
+								"6814f5f4b1adcafd339c1b40"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 16:44:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "108"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6814f5f4b1adcafd339c1b40\",\n    \"name\": \"Rohit 123\",\n    \"email\": \"rohit123@example.com\",\n    \"age\": 321,\n    \"salary\": 90000\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete an Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/deleteEmployee/6814f5f4b1adcafd339c1b40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deleteEmployee",
+						"6814f5f4b1adcafd339c1b40"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete an Employee",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/deleteEmployee/6814f5f4b1adcafd339c1b40",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"deleteEmployee",
+								"6814f5f4b1adcafd339c1b40"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 02 May 2025 16:45:11 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						}
+					],
+					"cookie": [],
+					"body": "\"Record deleted successfully!\""
+				}
+			]
+		}
+	]
+}
